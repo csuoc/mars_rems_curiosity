@@ -1,1 +1,1 @@
-# second_project_pipeline
+# MarsToday: evaluating Mars climate through REMS sensor onboard Curiosity Mars rover
