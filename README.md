@@ -39,5 +39,92 @@ Data prediction and current weather information were extracted using Selenium fr
 - images/ --> All the necessary pictures data/ --> Contains an edited version of the original dataframe 
 - README --> What you are reading right now.
 
-# 4. Data wrangling and cleaning
+# 4. Function definitions
+
+The first step was to define all the necessary functions to clean my datasets. For example, a function to remove columns would be:
+
+```python
+
+def remove_columns(df, column_name):
+    
+    """
+    This is a function that removes undesired columns. Requires two arguments.
+    Arguments: dataframe, column name
+    Input: the current dataframe
+    Output: the current dataframe without the selected columns
+    """
+    
+    df.drop(columns=f"{column_name}", inplace=True)
+    
+    return df.sample(2)
+
+```
+However, the most important functions are those needed to extract information from the NASA API (exaplained later). These functions are:
+
+```python
+def call_Curiosity (date, camera):
+    """
+    This is a function that calls NASA API 'Mars Rover Photos' with two arguments. It returns the url from
+    a specific camera onboard Curiosity rover.
+    date: input the desired date in the format YYYY-MM-DD as a STRING,
+    camera: select between FHAZ, RHAZ, MAST, CHEMCAM, MAHLI, MARDI, NAVCAM, PANCAM, MINITES, as STRING
+    
+    """
+        
+    try:
+        nasa = os.getenv("token")
+        url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date={date}&camera={camera}&api_key={nasa}"
+        request = requests.get(url)
+        df = pd.DataFrame(request.json())
+        df_clean = pd.DataFrame(df.values[0][0])
+        image_url = list(df_clean["img_src"])[0]
+        display(Image(image_url, width=300, height=200))
+        
+        return f"Image available for camera {camera} onboard Curiosity rover"
+
+    except:
+            
+        return f"No image available on {date} for camera {camera} onboard Curiosity rover, please select another date"
+```
+```python
+
+def get_pictures_Curiosity(date):
+    
+    """
+    This is a function that calls call_NASA function with one argument. It returns the url of all the pictures 
+    taken by all the cameras of Curiosity rover from a specific Sol date.
+    date: input the desired date in the format YYYY-MM-DD as STRING.
+    
+    """       
+    cameralist = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM", "PANCAM", "MINITES"]
+    for i in cameralist:
+        print(call_Curiosity(date, i))
+    pass
+```
+
+The objetive is to extract pictures from Mars givena determinate date.
+
+# Data wranling and cleaning
+
+The second step was to actually clean the databases:
+
+- Kaggle database: <br/>
+    In the beginning the dataframe looked like this:
+
+    ![](images/MarsFirst.PNG) <br/>
+    With a total shape of 1894 rows x 10 columns. The table contained unnecessary columns and a lot of NaNs. In addition, column titles could be more readable and I also wanted to include more information in the form of new columns. <br/>
+    The cleaning steps were the following:
+    <br/>
+    - Remove undesired columns: used "columns_to_remove" custom function
+    - Created a new column: "Mean_temp"
+    - Cleaned the atmosphere column: used "clean_atmosphere" custom function
+    - Renamed column names: used "rename_columns" custom function
+    - Cleaned the month column: used "clean_month" custom function
+    - Created a new column: "Season", by importing Month values <br/><br/>
+     
+    Data cleaned: <br/>
+![](images/MarsFinal.PNG)<br/><br/>
+
+- NOAA database:<br/>
+    In the beginning the dataframe looked like this:
 
