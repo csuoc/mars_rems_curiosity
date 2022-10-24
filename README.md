@@ -140,7 +140,7 @@ The second step was to actually clean the databases:
     - Rounded values of the mean_temp column
 
     Data cleaned:
-    ![](images/EarthFinal.PNG)<br/><br/>
+    ![](images/EarthFinal.PNG)
 
 # 6. Web Scrapping
 
@@ -162,4 +162,5 @@ And the final database:
 
 # 7. Data visualization and data analysis
 
+adas
 ![](images/Plots.png)
