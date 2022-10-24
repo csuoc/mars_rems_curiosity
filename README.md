@@ -167,7 +167,8 @@ At this point, one might think why was import to extract data from NOAA. The dat
 
 Thus, the coordinates from the Gale crater were extrapolated on Earth. The twin location on our planet is next to Papua New Guinea (5º south from the equator)
 
-![](images/Papua.PNG)
+<img src="images/Papua.PNG" width="500">
+
 
 Info about temperature and pressure were related an visualized using Plotly.
 
@@ -195,10 +196,12 @@ Some kind of direct proportion can be seen on Earth, with all the values distrib
 
 Solar heating on the day side and radiative cooling on the night side of a planet can induce pressure difference. Thermal tides, which are the wind circulation and waves driven by such a daily-varying pressure field, can explain a lot of variability of the Martian atmosphere. Compared to Earth's atmosphere, thermal tides have a larger influence on the Martian atmosphere because of the stronger diurnal temperature contrast. The surface pressure measured by Mars rovers showed clear signals of thermal tides, although the variation also depends on the shape of the planet's surface and the amount of suspended dust in the atmosphere.The atmospheric waves can also travel vertically and affect the temperature and water-ice content in the middle atmosphere of Mars.
 
-![](images/DustStorms.gif)
+<img class="center-block" src="images/DustStorms.gif" width="400">
+
 Mars and the distribution of dust storms on its Surface.
 
-![](images/DustStorms2.gif)
+<img class="center-block" src="images/DustStorms2.gif" width="400">
+
 Mars before and after a dust storm
 
 # 8. "MarsToday": a mini tool to predict the temperature of Mars beyond the given dataset
