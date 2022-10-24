@@ -221,6 +221,14 @@ Here is an example of a call to MarsToday function:
 
 ![](images/MarsTodayexample.png)
 
+# 9 Conclusions
+
+Mars has shown us the effects of a planet with no atmosphere and high amounts of CO2 in its atmosphere. Temperature and pressure variates significantly due to the harsh atmospheric changes, including large heat waves and dust storms. Earth shows milder temperatures thanks to the atmospheric density and magnetosfere.
+
+It is possible to predict the weather on Mars with pretty good results using basics statistics and rough methods. Nevertheless, with a good tool such as Machine Learning it could be possible to predict those values with more accuracy.
+
+As a personal opinion, this project has been a major challenge and I had to use resources never explored before, but that have had an incredible great impact on my behalf.
+
 # Links and Resources:
 
 - https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JE007005
