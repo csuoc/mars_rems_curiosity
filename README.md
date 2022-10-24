@@ -29,7 +29,7 @@ The main questions I considered are the following:
 
 The base data was extracted from Kaggle, "Mars weather data" by Kannan.K.R. Source: https://www.kaggle.com/datasets/imkrkannan/mars-weather-data
 
-The data was complemented with weather data from Papua New Guinea (twin location of Curiosity on Earth) avaialble on NOAA Global Surface Summary of the Day services, in the same range of dates as provided by Kannan.K.R. Source: https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day
+The data was complemented with weather data from Papua New Guinea (twin location of Curiosity on Earth) available on NOAA Global Surface Summary of the Day services, in the same range of dates as provided by Kannan.K.R. Source: https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day
 
 Data prediction and current weather information were extracted using Selenium from the CAB-CSIC/INTA webpage. Source: http://cab.inta-csic.es/rems//
 
@@ -162,5 +162,30 @@ And the final database:
 
 # 7. Data visualization and data analysis
 
-adas
+At this point, one might think why was import to extract data from NOAA. The data itself from Mars doesn't give many information unless it's compared with the conditions on Earth.
+
+Thus, the coordinates from the Gale crater were extrapolated on Earth. The twin location on our planet is next to Papua New Guinea (5º south from the equator)
+
+![](images/Papua.PNG)
+
+Info about temperature and pressure were related an visualized using Plotly.
+
 ![](images/Plots.png)
+
+## 7.1 Temperature profiles
+
+Please remember, the third planet from the Sun have a very thin atmosphere, approximately 100 times less dense than ours. This fact has direct implications on the surface temperature: without magnetic field or atmosphere to thermoregulate and distribute heat, the planet has to deal of temperatures from -30 ºC to -60 ºC. Meanwhile on Earth, the range of temperatures is much warmer and less prominent as on Mars.
+
+Take also a closer look to the subtle shift from Papua New Guinea. Since 2016, the temperature baseline has been displaced upwards! Could be an indicative of an anomaly, such as climate change. On the other hand, the temperature pattern on Mars remains constant, with very little deviations from one year to another. This can give us the key to predict future values beyond 2018.
+
+## 7.2 Pressure profiles
+
+It is impossible to not realize the weird pattern on Mars, which has no common points with Earth's. Why so?
+
+According to J.A.Rodríguez-Manfredi et al. on their paper published on JGR Planets, "Mars Surface Pressure Oscillations as Precursors of Large Dust Storms Reaching Gale" (DOI: https://doi.org/10.1029/2021JE007005), Martian dust storms strongly interfere with global circulation patterns and change the diurnal and semidiurnal pressure variability as well as oscillations with periods greater than one sol associated with planetary waves. The specific pressure oscillations preceding each storm period are likely to be signatures of the large-scale circulation patterns that enable the growth and propagation of the storm fronts.
+
+Another paper from N. Rennó et al., titled "Pressure observations by the Curiosity rover: Initial results" (DOI: https://doi.org/10.1002/2013JE004423) suggest that it is possible to witness atmospheric features at various spatial and temporal scales, e.g., the gradually increasing pressure due to the advancing Martian season, diurnal tides, thermal vortices, and other local atmospheric phenomena. 
+# Links and Resources:
+
+- https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JE007005
+- https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004423
