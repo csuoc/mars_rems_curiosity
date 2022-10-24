@@ -104,7 +104,7 @@ def get_pictures_Curiosity(date):
 
 The objetive is to extract pictures from Mars givena determinate date.
 
-# Data wranling and cleaning
+# 5. Data wranling and cleaning
 
 The second step was to actually clean the databases:
 
@@ -114,7 +114,7 @@ The second step was to actually clean the databases:
     ![](images/MarsFirst.PNG) <br/>
     With a total shape of 1894 rows x 10 columns. The table contained unnecessary columns and a lot of NaNs. In addition, column titles could be more readable and I also wanted to include more information in the form of new columns. <br/>
     The cleaning steps were the following:
-    <br/>
+<br/>
     - Remove undesired columns: used "columns_to_remove" custom function
     - Created a new column: "Mean_temp"
     - Cleaned the atmosphere column: used "clean_atmosphere" custom function
@@ -128,3 +128,33 @@ The second step was to actually clean the databases:
 - NOAA database:<br/>
     In the beginning the dataframe looked like this:
 
+    ![](images/EarthFirst.PNG)<br/>
+
+    The cleaning steps were the following:
+<br/>
+    - Remove undesired columns: used "columns_to_remove" custom function
+    - Renamed column names: used "rename_columns" custom function
+    - Converted temperatures values from Fahrenheit to Celsius: used "FtoC" custom function
+    - Converted from mBar to Pascals: used "mbartoPa" custom function
+    - Remove 99999s from Pressure column
+    - Rounded values of the mean_temp column <br/><br/>
+      Data cleaned: <br/>
+![](images/EarthFinal.PNG)<br/><br/>
+
+# 6. Web Scrapping
+
+Both dataset had to be complemented with additional information taken directly from webpages.
+
+This information is crucial for the last phase of the project, "Mars Today", in order to predict the weather of Mars beyond the limit date of the Kaggle dataframe.
+
+The scrapping was performed on the REMS widget from the CAB-REMS webpage, http://cab.inta-csic.es/rems/es/ using Selenium.
+
+## 6.1 Cleaning the database
+
+Similar operations were performed with the database originated.
+
+![](images/ScrapFirst.PNG)
+
+And the final database:
+
+![](images/ScrapFinal.PNG)
