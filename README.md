@@ -120,24 +120,24 @@ The second step was to actually clean the databases:
     ![](images/MarsFirst.PNG) <br/>
     With a total shape of 1894 rows x 10 columns. The table contained unnecessary columns and a lot of NaNs. In addition, column titles could be more readable and I also wanted to include more information in the form of new columns. <br/>
     The cleaning steps were the following:
-<br/>
+
     - Remove undesired columns: used "columns_to_remove" custom function
     - Created a new column: "Mean_temp"
     - Cleaned the atmosphere column: used "clean_atmosphere" custom function
     - Renamed column names: used "rename_columns" custom function
     - Cleaned the month column: used "clean_month" custom function
-    - Created a new column: "Season", by importing Month values <br><br/>
+    - Created a new column: "Season", by importing Month values <br></br>
      
     Data cleaned:
-![](images/MarsFinal.PNG)<br><br/>
+![](images/MarsFinal.PNG)
 
-- NOAA database:<br/>
+- NOAA database:</br>
     In the beginning the dataframe looked like this:
 
-    ![](images/EarthFirst.PNG)<br/>
+    ![](images/EarthFirst.PNG)</br>
 
     The cleaning steps were the following:
-<br/>
+
     - Remove undesired columns: used "columns_to_remove" custom function
     - Renamed column names: used "rename_columns" custom function
     - Converted temperatures values from Fahrenheit to Celsius: used "FtoC" custom function
@@ -146,7 +146,7 @@ The second step was to actually clean the databases:
     - Rounded values of the mean_temp column
 
     Data cleaned:
-    ![](images/EarthFinal.PNG)
+    <p style="text-align:center;"><img src="images/EarthFinal.PNG"></p>
 
 # 6. Web Scrapping
 
@@ -229,7 +229,7 @@ Here is an example of a call to MarsToday function:
 
 ![](images/MarsTodayexample.png)
 
-# 9 Conclusions
+# 9. Conclusions
 
 Mars has shown us the effects of a planet with no atmosphere and high amounts of CO2 in its atmosphere. Temperature and pressure variates significantly due to the harsh atmospheric changes, including large heat waves and dust storms. Earth shows milder temperatures thanks to the atmospheric density and magnetosfere.
 
@@ -237,7 +237,12 @@ It is possible to predict the weather on Mars with pretty good results using bas
 
 As a personal opinion, this project has been a major challenge and I had to use resources never explored before, but that have had an incredible great impact on my behalf.
 
-# Links and Resources:
+# 10. Links and Resources:
 
+- https://api.nasa.gov/
+- http://cab.inta-csic.es/rems/es/
+- https://mars.nasa.gov/msl/weather/
+- https://pds.nasa.gov/
+- https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day
 - https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JE007005
 - https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004423
