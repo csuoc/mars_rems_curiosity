@@ -1,5 +1,6 @@
 # MarsToday: evaluating Mars climate through REMS sensor onboard Curiosity Mars rover
 
+![](images/MarsSunset.jpg)
 
 A Mars rover is a motor vehicle designed to travel on the surface of Mars. Rovers have several advantages over stationary landers: they examine more territory, they can be directed to interesting features, they can place themselves in sunny positions to weather winter months, and they can advance the knowledge of how to perform very remote robotic vehicle control.
 
@@ -182,9 +183,44 @@ Take also a closer look to the subtle shift from Papua New Guinea. Since 2016, t
 
 It is impossible to not realize the weird pattern on Mars, which has no common points with Earth's. Why so?
 
-According to J.A.Rodríguez-Manfredi et al. on their paper published on JGR Planets, "Mars Surface Pressure Oscillations as Precursors of Large Dust Storms Reaching Gale" (DOI: https://doi.org/10.1029/2021JE007005), Martian dust storms strongly interfere with global circulation patterns and change the diurnal and semidiurnal pressure variability as well as oscillations with periods greater than one sol associated with planetary waves. The specific pressure oscillations preceding each storm period are likely to be signatures of the large-scale circulation patterns that enable the growth and propagation of the storm fronts.
+According to J.A.Rodríguez-Manfredi et al. on their paper published in JGR Planets, "Mars Surface Pressure Oscillations as Precursors of Large Dust Storms Reaching Gale" (DOI: https://doi.org/10.1029/2021JE007005), Martian dust storms strongly interfere with global circulation patterns and change the diurnal and semidiurnal pressure variability as well as oscillations with periods greater than one sol associated with planetary waves. The specific pressure oscillations preceding each storm period are likely to be signatures of the large-scale circulation patterns that enable the growth and propagation of the storm fronts.
 
-Another paper from N. Rennó et al., titled "Pressure observations by the Curiosity rover: Initial results" (DOI: https://doi.org/10.1002/2013JE004423) suggest that it is possible to witness atmospheric features at various spatial and temporal scales, e.g., the gradually increasing pressure due to the advancing Martian season, diurnal tides, thermal vortices, and other local atmospheric phenomena. 
+Another paper from N. Rennó et al., titled "Pressure observations by the Curiosity rover: Initial results" (DOI: https://doi.org/10.1002/2013JE004423) suggest that it is possible to witness atmospheric features at various spatial and temporal scales, e.g., the gradually increasing pressure due to the advancing Martian season, diurnal tides, thermal vortices, and other local atmospheric phenomena.
+
+## 7.3 Pressure vs Temperature
+
+Pressure and Temperature are strictly related, being directly proportional: the more temperature, the more pressure. That is why when meteorologists anounce anticyclones (regions of the atmosphera with high of high pressure) the temperatures increase.
+
+Some kind of direct proportion can be seen on Earth, with all the values distributed along the X and Y axis. However, this phenomena cannot be seen on Mars, leaving a "hole" where certain values of Pressure and Temperature can not coexist.
+
+Solar heating on the day side and radiative cooling on the night side of a planet can induce pressure difference. Thermal tides, which are the wind circulation and waves driven by such a daily-varying pressure field, can explain a lot of variability of the Martian atmosphere. Compared to Earth's atmosphere, thermal tides have a larger influence on the Martian atmosphere because of the stronger diurnal temperature contrast. The surface pressure measured by Mars rovers showed clear signals of thermal tides, although the variation also depends on the shape of the planet's surface and the amount of suspended dust in the atmosphere.The atmospheric waves can also travel vertically and affect the temperature and water-ice content in the middle atmosphere of Mars.
+
+![](images/DustStorms.gif)
+Mars and the distribution of dust storms on its Surface.
+
+![](images/DustStorms2.gif)
+Mars before and after a dust storm
+
+# 8. "MarsToday": a mini tool to predict the temperature of Mars beyond the given dataset
+
+As seen before, the temperature and pressure profiles, although being very abrupt, are very stable. This can allow anyone to extrapolate the values and predict the data.
+
+Disclaimer: REMS is currently active and has been reporting weather data until the present day. Newer data can be obtained from the Planetary Data System from NASA (https://pds.nasa.gov/). The purpose of this process is to practice unknown habilities.
+
+## 8.1 Methedology
+
+MarsToday() function works as follows: an user inputs a given date beyond 2018-02-28 in the format YYYY-MM-DD. MarsToday calls the scrapped database on CAB/REMS "widget" and the initial database "mars", looks for the date on both places and retrieves all the measurements made in years before, but same month and day. Then, the data is stored in a dataframe with Pandas and a series of basic statistics are performed: sums up all values and shows to average values and the standard deviation. The values are the extrapolation of the weather given a future date.
+
+Once the prediction is made, MarsToday calls "widget" database again and shows the information of the given information.
+
+By comparing the two outputs, the user can realize of the approximation was good enough or not.
+
+As a bonus (and for a cooler effect), the minitool calls NASI API by the two functions "get_pictures_Curiosity" and "call_NASA" and looks for all images taken from any camera onboard Curiosity rover in the selected date.
+
+Here is an example of a call to MarsToday function:
+
+![](images/MarsTodayexample.png)
+
 # Links and Resources:
 
 - https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JE007005
