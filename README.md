@@ -39,7 +39,8 @@ Data prediction and current weather information were extracted using Selenium fr
 # 3. File contents
 
 - src/ --> Contains the executable python files of the cleaning and visualization process. 
-- images/ --> All the necessary pictures data/ --> Contains an edited version of the original dataframe 
+- images/ --> All the necessary pictures 
+- data/ --> Contains an edited version of the original dataframe 
 - README --> What you are reading right now.
 
 # 4. Function definitions
@@ -106,6 +107,8 @@ def get_pictures_Curiosity(date):
 ```
 
 The objetive is to extract pictures from Mars givena determinate date.
+
+All functions can be found at Functions.py file.
 
 # 5. Data wrangling and cleaning
 
