@@ -1,17 +1,19 @@
 # MarsToday: evaluating Mars climate through REMS sensor onboard Curiosity Mars rover
 
 ![](images/MarsSunset.jpg)
-
+<p style="text-align:center;">Sunset on Mars</p>
 A Mars rover is a motor vehicle designed to travel on the surface of Mars. Rovers have several advantages over stationary landers: they examine more territory, they can be directed to interesting features, they can place themselves in sunny positions to weather winter months, and they can advance the knowledge of how to perform very remote robotic vehicle control.
 
 Curiosity landed in the crater Gale on planet Mars. The landing site coordinates are: 4.5895°S 137.4417°E. The location was named Bradbury Landing on 22 August 2012, in honor of science fiction author Ray Bradbury. Gale, an estimated 3.5 to 3.8 billion-year-old impact crater, is hypothesized to have first been gradually filled in by sediments; first water-deposited, and then wind-deposited, possibly until it was completely covered.
 
-![](images/Gale_crater.jpg)
-
+<p style="text-align:center;"><img src="images/Gale_crater.jpg")></p>
+<p style="text-align:center;">Location of Gale Crater</p>
 Curiosity has a lot of instruments onboard. One of them, REMS (Rover Environmental Monitoring Station) measures and provides daily and seasonal reports on atmospheric pressure, humidity, ultraviolet radiation at the Martian surface, air temperature, and ground temperature around the rover. REMS was develeoped in Spain by the Centro de Astrobología (CAB/CSIC-INTA) in collaboration with NASA and JPL-Caltech.
+<br></br>
 
-![](images/Installation.jpg)
-REMS installation. Credit NASA/JPL-Caltech/CAB
+<p style="text-align:center;"><img src="images/Installation.jpg" width=400)></p>
+
+<p style="text-align:center;">REMS installation. Credit NASA/JPL-Caltech/CAB</p>
 
 The data contained in this project represents the weather conditions on Mars from Sol 1 (August 7, 2012 on Earth) to Sol 1895 (February 27, 2018 on Earth). Sol is equivalent to 1 Martian day (1 Martian day = 24h 40 min).
 
@@ -121,10 +123,10 @@ The second step was to actually clean the databases:
     - Cleaned the atmosphere column: used "clean_atmosphere" custom function
     - Renamed column names: used "rename_columns" custom function
     - Cleaned the month column: used "clean_month" custom function
-    - Created a new column: "Season", by importing Month values <br/><br/>
+    - Created a new column: "Season", by importing Month values <br><br/>
      
-    Data cleaned: <br/>
-![](images/MarsFinal.PNG)<br/><br/>
+    Data cleaned:
+![](images/MarsFinal.PNG)<br><br/>
 
 - NOAA database:<br/>
     In the beginning the dataframe looked like this:
@@ -167,12 +169,12 @@ At this point, one might think why was import to extract data from NOAA. The dat
 
 Thus, the coordinates from the Gale crater were extrapolated on Earth. The twin location on our planet is next to Papua New Guinea (5º south from the equator)
 
-<img src="images/Papua.PNG" width="500">
+<p style="text-align:center;"><img src="images/Papua.PNG" width="500"></p>
 
 
 Info about temperature and pressure were related an visualized using Plotly.
 
-![](images/Plots.png)
+<p style="text-align:center;"><img src="images/Plots.png")></p>
 
 ## 7.1 Temperature profiles
 
@@ -196,13 +198,13 @@ Some kind of direct proportion can be seen on Earth, with all the values distrib
 
 Solar heating on the day side and radiative cooling on the night side of a planet can induce pressure difference. Thermal tides, which are the wind circulation and waves driven by such a daily-varying pressure field, can explain a lot of variability of the Martian atmosphere. Compared to Earth's atmosphere, thermal tides have a larger influence on the Martian atmosphere because of the stronger diurnal temperature contrast. The surface pressure measured by Mars rovers showed clear signals of thermal tides, although the variation also depends on the shape of the planet's surface and the amount of suspended dust in the atmosphere.The atmospheric waves can also travel vertically and affect the temperature and water-ice content in the middle atmosphere of Mars.
 
-<img class="center-block" src="images/DustStorms.gif" width="400">
+<p style="text-align:center;"><img src="images/DustStorms.gif" width="400"></p>
 
-Mars and the distribution of dust storms on its Surface.
+<p style="text-align:center;">Mars and the distribution of dust storms on its Surface.</p>
 
-<img class="center-block" src="images/DustStorms2.gif" width="400">
+<p style="text-align:center;"><img src="images/DustStorms2.gif" width="400"></p>
 
-Mars before and after a dust storm
+<p style="text-align:center;">Mars before and after a dust storm</p>
 
 # 8. "MarsToday": a mini tool to predict the temperature of Mars beyond the given dataset
 
