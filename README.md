@@ -104,7 +104,7 @@ def get_pictures_Curiosity(date):
 
 The objetive is to extract pictures from Mars givena determinate date.
 
-# 5. Data wranling and cleaning
+# 5. Data wrangling and cleaning
 
 The second step was to actually clean the databases:
 
@@ -137,9 +137,10 @@ The second step was to actually clean the databases:
     - Converted temperatures values from Fahrenheit to Celsius: used "FtoC" custom function
     - Converted from mBar to Pascals: used "mbartoPa" custom function
     - Remove 99999s from Pressure column
-    - Rounded values of the mean_temp column <br/><br/>
-      Data cleaned: <br/>
-![](images/EarthFinal.PNG)<br/><br/>
+    - Rounded values of the mean_temp column
+
+    Data cleaned:
+    ![](images/EarthFinal.PNG)<br/><br/>
 
 # 6. Web Scrapping
 
@@ -158,3 +159,7 @@ Similar operations were performed with the database originated.
 And the final database:
 
 ![](images/ScrapFinal.PNG)
+
+# 7. Data visualization and data analysis
+
+![](images/Plots.png)
