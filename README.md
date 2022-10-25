@@ -106,7 +106,7 @@ def get_pictures_Curiosity(date):
     pass
 ```
 
-The objetive is to extract pictures from Mars givena determinate date.
+The objetive is to extract pictures from Mars given a determinate date.
 
 All functions can be found at Functions.py file.
 
