@@ -24,7 +24,7 @@ However, REMS does not take measurements continuously and it takes measurements 
 The main questions I considered are the following:
 
 - How is the weather on Mars?
-- How it compares to its twin location on Earth?
+- How it compares with its twin location on Earth?
 - Is it possible to predict the weather with the missing data?
 - BONUS: can I obtain pictures from Mars and complement the data?
 
@@ -213,15 +213,15 @@ Solar heating on the day side and radiative cooling on the night side of a plane
 
 As seen before, the temperature and pressure profiles, although being very abrupt, are very stable. This can allow anyone to extrapolate the values and predict the data.
 
-Disclaimer: REMS is currently active and has been reporting weather data until the present day. Newer data can be obtained from the Planetary Data System from NASA (https://pds.nasa.gov/). The purpose of this process is to practice unknown habilities.
+Disclaimer: REMS is currently active and has been reporting weather data until the present day. Newer data can be obtained from the Planetary Data System from NASA (https://pds.nasa.gov/). The purpose of this process is to practice new skills.
 
 ## 8.1 Methedology
 
-MarsToday() function works as follows: an user inputs a given date beyond 2018-02-28 in the format YYYY-MM-DD. MarsToday calls the scrapped database on CAB/REMS "widget" and the initial database "mars", looks for the date on both places and retrieves all the measurements made in years before, but same month and day. Then, the data is stored in a dataframe with Pandas and a series of basic statistics are performed: sums up all values and shows to average values and the standard deviation. The values are the extrapolation of the weather given a future date.
+MarsToday() function works as follows: an user inputs a given date beyond 2018-02-28 in the format YYYY-MM-DD. MarsToday calls the scrapped database on CAB/REMS "widget" and the initial database "mars", looks for the date on both places and retrieves all the measurements made in years before, but same month and day. Then, the data is stored in a dataframe with Pandas and a series of basic statistics are performed: it takes all values and shows to average and the standard deviation. The values are the extrapolation of the weather given a future date.
 
 Once the prediction is made, MarsToday calls "widget" database again and shows the information of the given information.
 
-By comparing the two outputs, the user can realize of the approximation was good enough or not.
+By comparing the two outputs, the user can realize if the approximation was good enough or not.
 
 As a bonus (and for a cooler effect), the minitool calls NASI API by the two functions "get_pictures_Curiosity" and "call_NASA" and looks for all images taken from any camera onboard Curiosity rover in the selected date.
 
